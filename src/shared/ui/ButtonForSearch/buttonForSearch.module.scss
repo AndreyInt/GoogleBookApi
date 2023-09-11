@@ -1,0 +1,32 @@
+.buttonForSearch {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: var(--sarchIconSize-l);
+  height: var(--sarchIconSize-l);
+  background-image: url("../../assets/search.png");
+  text-rendering: auto;
+  background-color: inherit;
+  color: initial;
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity ease-in .15s;
+}
+
+.buttonForSearch:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1140px) {
+  .buttonForSearch {
+    width: var(--sarchIconSize-m);
+    height: var(--sarchIconSize-m);
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .buttonForSearch {
+    width: var(--sarchIconSize-s);
+    height: var(--sarchIconSize-s);
+  }
+}
