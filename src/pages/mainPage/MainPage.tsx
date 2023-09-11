@@ -26,7 +26,9 @@ export const MainPage = () => {
                             )}
                         </div>
                      </>
-                    : <div>Ops error :(, please reload the page.</div>}
+                    : booksInfo.status === null
+                        ? null
+                        : <div>Ops error :(, please reload the page.</div>}
         </div>
     );
 };

@@ -56,7 +56,7 @@ export const Search = ({className}:searchProps) => {
     const [fetch, setFetch] = useState(false);
     const fetchBooks = (e: KeyboardEvent) =>
     {
-        if (e.key == 'Enter' && searchIsFocus) {
+        if (e.key === 'Enter' && searchIsFocus) {
             navigate('/books');
             appDispatch(fetchSearchBooks(queryData)).finally(() => changeStartIndex(0));
         }
