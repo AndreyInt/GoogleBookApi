@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from "./app/App";
-import {Provider} from "react-redux";
-import {setupStore} from "src/app/providers/storeProvider/config/store";
 import {BrowserRouter} from "react-router-dom";
-
-const store = setupStore();
+import {StoreProvider} from "src/app/providers/storeProvider/ui/StoreProvider";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -13,11 +10,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
+        <StoreProvider>
             <BrowserRouter>
                 <App />
             </BrowserRouter>
-        </Provider>
+        </StoreProvider>
     </React.StrictMode>
 );
 
